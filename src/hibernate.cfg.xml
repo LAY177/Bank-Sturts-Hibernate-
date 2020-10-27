@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	
+	    <property name="hibernate.connection.url">jdbc:mysql://localhost/th_bank</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.show_sql">true</property>
+		
+		<property name="hibernate.hbm2ddl.auto">update</property><!-- create -->
+	   
+	   <mapping resource="com/HBean/User.hbm.xml"/>
+	   <mapping resource="com/HBean/Admin.hbm.xml"/>
+	   <mapping resource="com/HBean/Log.hbm.xml"/>	
+		
+	</session-factory>
+	
+</hibernate-configuration>

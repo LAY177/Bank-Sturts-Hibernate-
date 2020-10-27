@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+    <!--  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  -->
+
+<hibernate-mapping package="com.HBean">
+  <class name="Log" table="th_log">
+     <id name="logid" column="log_id">
+        <generator class="native"/>
+     </id>
+     <property name="logtype" column="log_type"/>
+     <property name="logamount" column="log_amount"/>
+     <property name="logtime" column="log_time"/>
+     
+     <many-to-one name="user" column="user_id"/>
+  
+  </class>
+
+
+</hibernate-mapping>

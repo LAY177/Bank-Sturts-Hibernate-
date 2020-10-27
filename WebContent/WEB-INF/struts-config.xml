@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	
+	<form-beans>
+	   <form-bean name="loginForm" type="com.action.LoginActionForm"></form-bean>
+	
+	</form-beans>
+	
+	<action-mappings>
+	
+	   <action path="/login"
+	           type="com.action.LoginAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/login/user-homepage.jsp"></forward>
+	     <forward name="error" path="/login/error1.jsp"></forward>
+	   </action>
+	   
+	   <action path="/alogin"
+	           type="com.action.ALoginAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/login/alogin_success.jsp"></forward>
+	     <forward name="error" path="/login/error1.jsp"></forward>
+	   </action>
+	   
+	   <action path="/register"
+	           type="com.action.RegisterAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/login/register_success.jsp"></forward>
+	     <forward name="error" path="/login/error1.jsp"></forward>
+	   </action>
+	   
+	    <action path="/flag"
+	           type="com.action.FlagAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/login/alogin_success.jsp"></forward>
+	     <forward name="error" path="/manager/error.jsp"></forward>
+	   </action>
+	   
+	   <action path="/query"
+	           type="com.action.QueryAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/manager/op_success.jsp"></forward>
+	     <forward name="error" path="/manager/error.jsp"></forward>
+	   </action>
+	   
+	   <action path="/deposit"
+	           type="com.action.DepositAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/manager/op_success.jsp"></forward>
+	     <forward name="false" path="/manager/userflag_false.jsp"></forward>
+	     <forward name="error" path="/manager/error.jsp"></forward>
+	   </action>
+	   
+	   <action path="/withdrawals"
+	           type="com.action.WithdrawalsAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/manager/op_success.jsp"></forward>
+	     <forward name="false" path="/manager/userflag_false.jsp"></forward>
+	     <forward name="error" path="/manager/error.jsp"></forward>
+	   </action>
+	   
+	   <action path="/transfer"
+	           type="com.action.TransferAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/manager/op_success.jsp"></forward>
+	     <forward name="false" path="/manager/userflag_false.jsp"></forward>
+	     <forward name="error" path="/manager/error.jsp"></forward>
+	   </action>
+	   
+	   <action path="/operateDetail"
+	           type="com.action.OperateDetailAction"
+	           name="loginForm"
+	           scope="request"
+	   >
+	     <forward name="success" path="/manager/operateDetail_success.jsp"></forward>
+	     <forward name="error" path="/manager/error.jsp"></forward>
+	   </action>
+	   
+	
+	</action-mappings>
+	
+</struts-config>
